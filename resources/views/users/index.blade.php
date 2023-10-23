@@ -33,16 +33,7 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td class="d-flex">
-                            <a href="{{ route('users-show', $user->id) }}" class="btn btn-info mr-1" >Detalhes</a>    
-                            <a href="{{ route('users-edit', $user->id) }}" class="btn btn-warning mr-1" >Editar</a> 
-                            <form action="{{ route('users-destroy', $user->id) }}" method="POST">   
-                                @csrf
-                                @method('DELETE')      
-                                <button type="submit" class="btn btn-danger">Excluir</button>
-                            </form>
-                        </td>
+                        <td>{{ $user->email }}</td>                        
                     </tr>
                 @endforeach
             </tbody>

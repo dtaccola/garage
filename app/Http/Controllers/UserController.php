@@ -13,16 +13,16 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-
-        return view('welcome', ['users' => $users]);
+        // dd($users);
+        return view('users/index', ['users' => $users]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -30,7 +30,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+
+        // dd($request);
+        // return $request;
+        
+        return redirect()->route('users-index');
     }
 
     /**
