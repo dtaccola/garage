@@ -78,4 +78,11 @@ class UserController extends Controller
 
         return redirect()->route('users-index');
     }
+
+    public function destroy(Ave $ave)
+    {
+        $ave->delete();
+
+        return redirect()->route('aves-index');
+    }
 }

@@ -52,7 +52,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('users.edit', ['user' => $user]); 
+        return view('users.show', ['user' => $user]); 
     }
 
     /**
@@ -60,22 +60,14 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $user = User::where('id', $id);
-
-        $data = $request->except(['_token']);
-
-        $user->update($data);
-
-        return redirect()->route('users-index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(string $id)
     {
-        $user->delete();
-
-        return redirect()->route('users-index');
+        //
     }
 }

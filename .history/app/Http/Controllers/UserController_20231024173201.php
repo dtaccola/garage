@@ -72,10 +72,17 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(string $id)
     {
-        $user->delete();
+        $ave->delete();
 
-        return redirect()->route('users-index');
+        return redirect()->route('aves-index');
+    }
+
+    public function destroy(Ave $ave)
+    {
+        $ave->delete();
+
+        return redirect()->route('aves-index');
     }
 }
