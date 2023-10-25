@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
+        <livewire:counter />
         <body>
             <div class="container">
                 <div class="row">
@@ -9,7 +10,6 @@
                         <h1>Lista</h1>
                         <a href="{{ route('users-create') }}" class="btn btn-primary">Novo registro</a>
                     </div>
-                    <livewire:counter />
                 </div>
                 <table class="table table-striped">
                     <thead>
@@ -37,7 +37,8 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>            
+            </div>
+            @livewireScripts
         </body>
     </div>
 @endsection

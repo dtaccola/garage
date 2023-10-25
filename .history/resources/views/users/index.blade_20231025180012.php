@@ -9,7 +9,6 @@
                         <h1>Lista</h1>
                         <a href="{{ route('users-create') }}" class="btn btn-primary">Novo registro</a>
                     </div>
-                    <livewire:counter />
                 </div>
                 <table class="table table-striped">
                     <thead>
