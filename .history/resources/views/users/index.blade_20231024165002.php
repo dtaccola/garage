@@ -13,6 +13,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
                             <th scope="col"><center>Ações</center></th>
@@ -20,7 +21,8 @@
                     </thead>
                     <tbody>
                         @foreach($users as $user)
-                            <tr>                                
+                            <tr>
+                                <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td class="d-flex">
