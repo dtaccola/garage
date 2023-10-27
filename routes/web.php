@@ -25,7 +25,7 @@ Route::prefix('users')->controller(UserController::class)->group(function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 

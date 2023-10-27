@@ -33,7 +33,7 @@
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <a href="{{ route('users-show', $user->id) }}" class="btn btn-default btn-flat">Profile</a>
+                                <a href="{{ route('users-show', Auth::user()->id) }}" class="btn btn-default btn-flat">Profile</a>
                                 <a href="#" class="btn btn-default btn-flat float-right"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     Sign out
